@@ -102,7 +102,7 @@ const SearchBooks = () => {
                   />
                 </Col>
                 <Col xs={12} md={4}>
-                  <Button type='submit' variant='success' size='lg'>
+                  <Button type='submit' variant='success' size='md'>
                     Submit Search
                   </Button>
                 </Col>
