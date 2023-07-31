@@ -97,12 +97,12 @@ const SearchBooks = () => {
                     value={searchInput}
                     onChange={(e) => setSearchInput(e.target.value)}
                     type='text'
-                    size='lg'
+                    size='md'
                     placeholder='Search for a book'
                   />
                 </Col>
                 <Col xs={12} md={4}>
-                  <Button type='submit' variant='success' size='md'>
+                  <Button type='submit' variant='success' size='lg'>
                     Submit Search
                   </Button>
                 </Col>
