@@ -120,6 +120,7 @@ const SearchBooks = () => {
           <CardColumns>
             {searchedBooks.map((book) => {
               return (
+                <Col md="4">
                 <Card key={book.bookId} border='dark'>
                   {book.image ? (
                     <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' />
@@ -140,6 +141,7 @@ const SearchBooks = () => {
                     )}
                   </Card.Body>
                 </Card>
+                </Col>
               );
             })}
           </CardColumns>
