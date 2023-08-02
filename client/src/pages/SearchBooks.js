@@ -7,6 +7,8 @@ import Auth from '../utils/auth';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 import { useMutation } from '@apollo/client';
 import { SAVE_BOOK } from '../utils/mutations';
+import Row from 'react-bootstrap/Row';
+
 
 const SearchBooks = () => {
   // create state for holding returned Google api data
@@ -110,17 +112,19 @@ const SearchBooks = () => {
             </Form>
           </Container>
         </Jumbotron>
-  
         <Container>
+
           <h2>
             {searchedBooks.length
               ? `Viewing ${searchedBooks.length} results:`
               : 'Search for a book to begin'}
           </h2>
-          <CardColumns>
+        </Container>
+
+        <Row xs={1} md={4} className='flex'>
             {searchedBooks.map((book) => {
               return (
-                <Col md="4">
+                <Col md="4" >
                 <Card key={book.bookId} border='dark'>
                   {book.image ? (
                     <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' />
@@ -144,8 +148,8 @@ const SearchBooks = () => {
                 </Col>
               );
             })}
-          </CardColumns>
-        </Container>
+         
+        </Row>
       </>
     );
   };

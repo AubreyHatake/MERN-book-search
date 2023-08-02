@@ -4,7 +4,7 @@ In this app the user is able to search their favorite books, create an account, 
 Link to the deployed app will go here:
 
 this is a screenshot of the app when you search a book title
-![HP screenshot](<assets/Screenshot 2023-08-01 214931.png>)
+![star wars](assets/starwars.jpg)
 
 ## User Story 
 AS AN avid reader
