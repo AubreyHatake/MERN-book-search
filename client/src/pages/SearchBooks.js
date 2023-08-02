@@ -121,10 +121,10 @@ const SearchBooks = () => {
           </h2>
         </Container>
 
-        <Row xs={1} md={4} className='flex'>
+        <Row xs={1} md={4} className='container'>
             {searchedBooks.map((book) => {
               return (
-                <Col md="4" >
+                <Col md="4" className='flex' >
                 <Card key={book.bookId} border='dark'>
                   {book.image ? (
                     <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' />
