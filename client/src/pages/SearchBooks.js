@@ -1,13 +1,13 @@
 // React setup
 import React, { useState, useEffect } from 'react';
-import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import { Jumbotron, Container, Col, Form, Button, Card, Row } from 'react-bootstrap';
 // import the 'auth' setup
 import Auth from '../utils/auth';
 // need these to refactor code for GraphQL API
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 import { useMutation } from '@apollo/client';
 import { SAVE_BOOK } from '../utils/mutations';
-import Row from 'react-bootstrap/Row';
+
 
 
 const SearchBooks = () => {
@@ -92,7 +92,7 @@ const SearchBooks = () => {
           <Container>
             <h1>Search for Books!</h1>
             <Form onSubmit={handleFormSubmit}>
-              <Form.Row>
+              <Form.Row >
                 <Col xs={12} md={8}>
                   <Form.Control
                     name='searchInput'
@@ -104,7 +104,7 @@ const SearchBooks = () => {
                   />
                 </Col>
                 <Col xs={12} md={4}>
-                  <Button type='submit' variant='success' size='lg'>
+                  <Button type='submit' variant='success' size='md'>
                     Submit Search
                   </Button>
                 </Col>
