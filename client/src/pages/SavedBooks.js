@@ -1,6 +1,6 @@
 // React setup
 import React from 'react';
-import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
+import { Jumbotron, Container, Row, Card, Button, Col, CardGroup } from 'react-bootstrap';
 // import the 'auth' setup
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
@@ -25,11 +25,8 @@ const SavedBooks = () => {
 
     // new code
     try {
-    const response = await removeBook({ variables: { bookId } });
-        console.log('Deleted record: ', response);
-        if (error) {
-          console.log(error);
-        }
+    const {data} = await removeBook({ variables: { bookId } });
+        console.log('Deleted record: ', data);
       // also remove from Localstorage
       removeBookId(bookId);
     } catch (err) {
@@ -57,10 +54,13 @@ const SavedBooks = () => {
             ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
             : 'You have no saved books!'}
         </h2>
-        <CardColumns>
+        </Container>
+      <Row xs={1} md={4}  className='container'>
+        <Col md="12" className='flex'>
+          <CardGroup>
           {userData.savedBooks.map((book) => {
             return (
-              <Card key={book.bookId} border='dark'>
+              <Card style={{ width: '18rem' }} key={book.bookId} border='dark'>
                 {book.image ? <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' /> : null}
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
@@ -73,8 +73,9 @@ const SavedBooks = () => {
               </Card>
             );
           })}
-        </CardColumns>
-      </Container >
+          </CardGroup>
+        </Col>
+      </Row >
     </>
   );
 };

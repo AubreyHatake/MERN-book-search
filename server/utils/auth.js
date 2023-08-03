@@ -30,7 +30,7 @@ module.exports = {
       console.log('Invalid token');
       // return res.status(400).json({ message: 'invalid token!' });
     }
-
+    return req;
     // send to next endpoint
     // next();
   },
