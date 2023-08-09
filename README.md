@@ -1,7 +1,7 @@
 # MERN-book-search
 In this app the user is able to search their favorite books, create an account, and save their favorite books to their profile. 
 
-Link to the deployed app will go here:
+Link to the deployed app will go here: https://mernbookiesearch-a4fe9cd2b145.herokuapp.com/
 
 this is a screenshot of the app when you search a book title
 ![screenshot](assets/JunjiIto.png)
